@@ -1,34 +1,9 @@
 box-rethinkdb
 =============
 
-Wercker box for rethinkdb
+Wercker box for rethinkdbdash
 
-See the boxes section on our [dev
-center](http://devcenter.wercker.com/articles/boxes)
-
-Source:
-https://github.com/mies/box-rethinkdb
-
-use this with wercker; in your wercker.yml file:
-
-``` yaml
-services:
-  - mies/rethinkdb
-```
-
-Sample application available at:
-https://github.com/mies/getting-started-golang-rethinkdb
-
-
-Status on wercker:
-
-[![wercker status](https://app.wercker.com/status/3afbacf80de0df1390d44e7976dcfff9/m "wercker status")](https://app.wercker.com/project/bykey/3afbacf80de0df1390d44e7976dcfff9)
-
-I've also added a Vagrantfile + provisioning bash script so you can run a local instance with Rethinkdb and test the provisioning
-
-# What's new
-
-- Install RethinkDB 1.10 from PPA
+based off of Micha Hernandez van Leuffen's [RethinkDB box](Micha Hernandez van Leuffen)
 
 # License
 
@@ -55,6 +30,4 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
-## 0.1.3
-
-- Install RethinkDB 1.8 from PPA
+## 0.0.1
