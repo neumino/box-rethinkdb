@@ -1,5 +1,5 @@
 name: box-rethinkdbdash
-version: 0.1.1
+version: 0.1.2
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: main
 platform: ubuntu@12.04
@@ -18,7 +18,7 @@ script: |
   cd node
   git checkout v0.11.10-release
   ./configure
-  make
+  make -j 4
   sudo make install
   sudo ls -s /usr/bin/node node
   cd
@@ -28,12 +28,6 @@ script: |
   sudo apt-get install rethinkdb -y
   sudo mkdir -p /etc/rethinkdb/instances.d
   sudo -- sh -c "echo 'bind=all' > /etc/rethinkdb/instances.d/default.conf"
-  echo `node --version`
-  echo `nodejs --version`
-  sudo ln -s /usr/bin/node /usr/bin/nodejs
-  git clone https://github.com/atnnn/node-protobuf
-  npm install ~/node-protobuf
-
 
 env:
   WERCKER_RETHINKDB_PORT: 28015
