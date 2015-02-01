@@ -1,5 +1,5 @@
-box-rethinkdb
-=============
+box-rethinkdbash
+================
 
 Wercker box for rethinkdbdash
 
