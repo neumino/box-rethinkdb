@@ -1,5 +1,5 @@
 name: box-rethinkdbdash
-version: 0.2.0
+version: 0.2.1
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: main
 platform: ubuntu@12.04
@@ -12,11 +12,11 @@ keywords:
   - json
   - nodejs
 packages:
-  - rethinkdb@2.0
+  - rethinkdb@2.1
 script: |
-  git clone https://github.com/joyent/node
+  git clone https://github.com/nodejs/node
   cd node
-  git checkout v0.12.0-release
+  git checkout v4.1.0
   ./configure
   make -j 4
   sudo make install
@@ -33,4 +33,4 @@ env:
   WERCKER_RETHINKDB_PORT: 28015
   WERCKER_RETHINKDB_HOST: $$HOST$$
   WERCKER_RETHINKDB_URL: $$HOST$$:28015
-  WERCKER_RETHINKDB_VERSION: "2.0"
+  WERCKER_RETHINKDB_VERSION: "2.1"
