@@ -1,5 +1,5 @@
 name: box-rethinkdbdash
-version: 2.1.0
+version: 2.1.1
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: main
 platform: ubuntu@12.04
@@ -14,6 +14,7 @@ keywords:
 packages:
   - rethinkdb@2.1
 script: |
+  curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
   source /etc/lsb-release && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" | sudo tee /etc/apt/sources.list.d/rethinkdb.list
   wget -O- http://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
   sudo apt-get update
